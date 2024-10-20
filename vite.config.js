@@ -1,4 +1,3 @@
-
 const path = require("path")
 const glob = require("glob")
 
@@ -18,12 +17,13 @@ glob
 
 export default defineConfig({
   root: "src",
+  publicDir: "../images",
   build: {
     manifest: true,
     outDir: "../dist",
     emptyOutDir: true,
     rollupOptions: {
-      input
+      input,
     },
   },
   server: {
