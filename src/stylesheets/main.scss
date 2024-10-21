@@ -1,3 +1,14 @@
-/* Your styles go here */
-@import "bootstrap/scss/bootstrap.scss";
-@import "bootstrap-icons/font/bootstrap-icons.css";
+@use "custom";
+
+// Import components
+@use "components/animations";
+@use "components/buttons";
+@use "components/mixins";
+@use "components/typography";
+
+// Import sections
+@use "sections/navbar";
+@use "sections/intro-section";
+@use "sections/portfolio";
+@use "sections/contact";
+@use "sections/footer";
