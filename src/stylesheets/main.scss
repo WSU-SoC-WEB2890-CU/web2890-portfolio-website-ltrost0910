@@ -7,15 +7,10 @@
 @use "components/typography";
 
 // Import sections
-//@use "sections/navbar";
 @use "sections/intro-section";
 @use "sections/portfolio";
 @use "sections/contact";
 @use "sections/footer";
-
-// .cinzeldecor {
-//   font-family: $cinzel-decor;
-// }
 
 //header navmenu company title
 //only show on very small screens
