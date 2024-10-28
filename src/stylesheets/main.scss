@@ -12,3 +12,27 @@
 @use "sections/portfolio";
 @use "sections/contact";
 @use "sections/footer";
+
+// .cinzeldecor {
+//   font-family: $cinzel-decor;
+// }
+
+//header navmenu company title
+//only show on very small screens
+.responsive-short {
+  display: none;
+}
+
+@media (max-width: 576px) {
+  .responsive-header {
+    font-size: 4vw;
+  }
+}
+@media (max-width: 320px) {
+  .responsive-header {
+    display: none; /* Hide original text */
+  }
+  .responsive-short {
+    display: block;
+  }
+}
