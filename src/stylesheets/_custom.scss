@@ -1,6 +1,7 @@
 //FONTS
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"); // Import font awesome
-@import url("https://fonts.googleapis.com/css2?family=Cinzel+Decorative&display=swap"); // Import Cinzel
+@import url("https://fonts.googleapis.com/css2?family=Cinzel+Decorative&display=swap"); // Import Cinzel Decor
+@import url("https://fonts.googleapis.com/css2?family=Cinzel&display=swap"); // Import Cinzel
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap"); // Import Montserrat
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
 
@@ -15,9 +16,14 @@ $primary: $my-blue;
 $secondary: $my-cream;
 $font-family-base: "Poppins", sans-serif;
 $cinzel-decor: "Cinzel Decorative", serif;
+$cinzel: "Cinzel", serif;
 
 .cinzeldecor {
   font-family: $cinzel-decor;
+}
+
+.cinzel {
+  font-family: $cinzel;
 }
 
 .primary-color-fill {

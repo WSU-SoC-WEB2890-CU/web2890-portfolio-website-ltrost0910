@@ -1,16 +1,8 @@
-@use "custom";
+@import "custom";
 
-// Import components
-@use "components/animations";
-@use "components/buttons";
-@use "components/mixins";
-@use "components/typography";
-
-// Import sections
-@use "sections/intro-section";
-@use "sections/portfolio";
-@use "sections/contact";
-@use "sections/footer";
+.cinzeldecor {
+  font-family: $cinzel-decor;
+}
 
 //header navmenu company title
 //only show on very small screens
@@ -29,5 +21,187 @@
   }
   .responsive-short {
     display: block;
+  }
+}
+
+/* Ensures the hero covers the full height of the viewport */
+.heroContainer {
+  position: relative;
+  /* was 100vh */
+  height: 45vh;
+  width: 100%;
+  margin: 0;
+}
+
+/* Text Column with Angled Edge */
+.hero-text-column {
+  background-color: #007bff; /* Blue color */
+  color: white;
+  padding: 20px 60px 20px 20px; /* Adjust right padding */
+  clip-path: polygon(0 0, calc(100% - 75px) 0, 100% 100%, 0 100%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 55%; /* Adjust as needed to control overlap width */
+  height: 100%;
+  min-height: 45vh; /* Matches image column height */
+  display: flex; /* Enable Flexbox */
+  flex-direction: column; /* Stack elements vertically */
+  justify-content: center; /* Center elements vertically */
+  align-items: flex-start; /* Align text to the left */
+  /* z-index: 2;Ensure it overlaps the image column */
+}
+/* Image Column */
+.hero-image-column {
+  background-color: #6c757d; /* Grey color */
+  // position: relative;
+  /*  margin-left: 45%; Pushes the image column to the right for overlap */
+  height: 45vh; /* Sets the height to full viewport */
+  // z-index: 1;
+}
+.hero-image-column img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* placeholder */
+
+// comment out for testing
+// @media (max-width: 768px) {
+//   .hero-text-column,
+//   .hero-image-column {
+//     position: relative;
+//     width: 100%;
+//     margin-left: 0;
+//     clip-path: none;
+//   }
+
+//   .hero-text-column {
+//     height: auto;
+//     width: 100%;
+//     padding: 20px;
+//     min-height: 20vh;
+//   }
+
+//   .hero-image-column {
+//     width: 100%;
+//     height: auto;
+//   }
+// }
+
+.img-gradient {
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), var(--image-url);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  aspect-ratio: 3 / 2;
+  position: relative;
+}
+.force-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.lt-gray {
+  background-color: #f0f0f0;
+}
+
+.bg-blur {
+  backdrop-filter: blur(4px) saturate(80%);
+}
+
+.decor-heading {
+  content: url("/fancy_underline.png");
+  width: 300px;
+}
+
+// STYLE THE BACK TO TOP BUTTON
+.back-to-top {
+  position: fixed;
+  width: 3rem;
+  height: 3rem;
+  right: 1.875rem;
+  bottom: 1.875rem;
+  z-index: 9999;
+  background-color: black;
+  color: white; /* Text or icon inside will be white */
+
+  filter: invert(0); /* Default, white icon on black background */
+  transition: filter 0.3s ease-in-out;
+
+  &:hover {
+    filter: invert(1); /* Inverts the color when hovered: black icon on white background */
+  }
+
+  i {
+    font-size: 1rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+/* Default image size (for large screens) */
+footer img {
+  width: 100px; /* Default size */
+  height: 100px;
+}
+
+.contact-section {
+  padding: 4rem 0;
+}
+.contact-map {
+  height: 400px;
+  width: 100%;
+  border: none;
+}
+.contact-form-feedback {
+  color: #dc3545;
+  margin-top: 0.5rem;
+}
+.contact-form-success {
+  color: #28a745;
+}
+
+/* Styles for smaller screens */
+@media (max-width: 767px) {
+  placeholder {
+    font-size: 10px;
+  }
+}
+
+/* Styles for medium and larger screens */
+@media (min-width: 768px) {
+  placeholder {
+    font-size: 10px;
+  }
+}
+
+/* For screens smaller than large (992 is large) */
+@media (max-width: 991px) {
+  footer img {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+/* Styles for smaller screens */
+@media (max-width: 767px) {
+  .float-figure {
+    width: 100%;
+    margin-right: initial;
+  }
+}
+
+/* Styles for medium and larger screens */
+@media (min-width: 768px) {
+  .float-figure {
+    width: 40%;
+    margin-right: 2rem;
   }
 }
