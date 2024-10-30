@@ -28,6 +28,16 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 })
 
+//add hero to page
+fetch("hero.html")
+  .then((res) => res.text())
+  .then((text) => {
+    let oldelem = document.querySelector("script#js_hero")
+    let newelem = document.createElement("div")
+    newelem.innerHTML = text
+    oldelem.parentNode.replaceChild(newelem, oldelem)
+  })
+
 //add footer to page
 fetch("footer.html")
   .then((res) => res.text())

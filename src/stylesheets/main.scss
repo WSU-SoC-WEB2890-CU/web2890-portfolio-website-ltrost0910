@@ -27,7 +27,7 @@
 /* Adjusted Hero Container */
 .heroContainer {
   position: relative;
-  height: 45vh;
+  height: 100%;
   width: 100%;
   margin: 0;
 }
@@ -72,6 +72,7 @@
     clip-path: none;
     min-height: 20vh;
     height: auto; /* Allow natural height on smaller screens */
+    overflow-x: hidden;
   }
 
   .hero-image-column {
