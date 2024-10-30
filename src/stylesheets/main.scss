@@ -67,28 +67,27 @@
 
 /* placeholder */
 
-// comment out for testing
-// @media (max-width: 768px) {
-//   .hero-text-column,
-//   .hero-image-column {
-//     position: relative;
-//     width: 100%;
-//     margin-left: 0;
-//     clip-path: none;
-//   }
+@media (max-width: 768px) {
+  .hero-text-column,
+  .hero-image-column {
+    position: relative;
+    width: 100%;
+    margin-left: 0;
+    clip-path: none;
+  }
 
-//   .hero-text-column {
-//     height: auto;
-//     width: 100%;
-//     padding: 20px;
-//     min-height: 20vh;
-//   }
+  .hero-text-column {
+    height: auto;
+    width: 100%;
+    padding: 20px;
+    min-height: 20vh;
+  }
 
-//   .hero-image-column {
-//     width: 100%;
-//     height: auto;
-//   }
-// }
+  .hero-image-column {
+    width: 100%;
+    height: auto;
+  }
+}
 
 .img-gradient {
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), var(--image-url);
