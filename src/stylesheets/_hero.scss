@@ -1,0 +1,63 @@
+/* Hero Container */
+.heroContainer {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+
+/* Text Column with Angled Edge */
+.hero-text-column {
+  background-color: #007bff;
+  color: white;
+  padding: 20px 60px 20px 20px;
+  clip-path: polygon(0 0, calc(100% - 75px) 0, 100% 100%, 0 100%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60%; /* Adjust width as needed */
+  height: 45vh; /* Adjust height as needed */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  z-index: 2;
+}
+
+/* Image Column */
+.hero-image-column {
+  height: 45vh; /* Adjust height as needed */
+  padding: 0;
+}
+
+/* Set the image as a background */
+.hero-image-column img {
+  width: 50%;
+  margin-left: 50%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 767px) {
+  .hero-text-column {
+    position: relative; /* Remove absolute positioning for smaller screens */
+    width: 100%;
+    padding: 20px;
+    clip-path: none; /* Remove clip-path for smaller screens */
+    min-height: 20vh; /* Adjust as needed */
+    height: auto; /* Allow natural height */
+    overflow-x: hidden;
+
+    /* Set background image */
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      /* Dark gradient overlay */ url("/intro-section-hands-typing-unsplash.webp"); /* Your image URL */
+    background-size: cover; /* Cover the whole container */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent tiling */
+  }
+
+  .hero-image-column {
+    display: none; /* Hide the image column on smaller screens */
+  }
+}

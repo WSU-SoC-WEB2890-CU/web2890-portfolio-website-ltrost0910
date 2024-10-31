@@ -1,4 +1,5 @@
 @import "custom";
+@import "hero";
 
 .cinzeldecor {
   font-family: $cinzel-decor;
@@ -21,63 +22,6 @@
   }
   .responsive-short {
     display: block;
-  }
-}
-
-/* Adjusted Hero Container */
-.heroContainer {
-  position: relative;
-  height: 100%;
-  width: 100%;
-  margin: 0;
-}
-
-/* Text Column with Angled Edge */
-.hero-text-column {
-  background-color: #007bff;
-  color: white;
-  padding: 20px 60px 20px 20px;
-  clip-path: polygon(0 0, calc(100% - 75px) 0, 100% 100%, 0 100%);
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 60%;
-  height: 45vh;
-  /* max-height: 35vh;Limit height for larger screens */
-  /* min-height: 35vh;Reduced min-height for more compact look */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  z-index: 2;
-}
-
-/* Image Column */
-.hero-image-column {
-  height: 45vh;
-  padding: 0;
-}
-
-.hero-image-column img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-@media (max-width: 767px) {
-  .hero-text-column {
-    position: relative;
-    width: 100%;
-    padding: 20px;
-    clip-path: none;
-    min-height: 20vh;
-    height: auto; /* Allow natural height on smaller screens */
-    overflow-x: hidden;
-  }
-
-  .hero-image-column {
-    width: 100%;
-    height: 20vh;
   }
 }
 
