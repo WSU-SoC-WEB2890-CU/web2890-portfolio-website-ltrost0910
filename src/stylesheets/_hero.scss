@@ -8,15 +8,15 @@
 
 /* Text Column with Angled Edge */
 .hero-text-column {
-  background-color: #007bff;
-  color: white;
-  padding: 20px 60px 20px 20px;
+  background-color: $secondary;
+  // need to set background color for clip-path to appear
+  padding: 60px;
   clip-path: polygon(0 0, calc(100% - 75px) 0, 100% 100%, 0 100%);
   position: absolute;
   top: 0;
   left: 0;
   width: 60%; /* Adjust width as needed */
-  height: 45vh; /* Adjust height as needed */
+  height: 100vh; /* Adjust height as needed */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -26,7 +26,7 @@
 
 /* Image Column */
 .hero-image-column {
-  height: 45vh; /* Adjust height as needed */
+  height: 100vh; /* Adjust height as needed */
   padding: 0;
 }
 
