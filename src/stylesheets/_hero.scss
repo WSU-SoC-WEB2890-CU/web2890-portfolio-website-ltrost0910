@@ -55,8 +55,15 @@
     background-size: cover; /* Cover the whole container */
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Prevent tiling */
+    /* Change text color to white */
+    color: white;
   }
-
+  /* Override specific child elements if needed */
+  .hero-text-column h1,
+  .hero-text-column h3,
+  .hero-text-column p {
+    color: white;
+  }
   .hero-image-column {
     display: none; /* Hide the image column on smaller screens */
   }
