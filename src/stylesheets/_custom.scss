@@ -14,6 +14,13 @@ $black: #000000;
 $white: #ffffff;
 $primary: $my-blue;
 $secondary: $my-cream;
+// FILL COLORS
+.primary-color-fill {
+  fill: $primary;
+}
+.secondary-color-fill {
+  fill: $secondary;
+}
 
 //FONTS
 $poppins: "Poppins", sans-serif;
@@ -21,14 +28,6 @@ $font-family-base: $poppins;
 $cinzel-decor: "Cinzel Decorative", serif;
 $cinzel: "Cinzel", serif;
 $montserrat: "Montserrat", sans-serif;
-
-// .cinzeldecor {
-//   font-family: $cinzel-decor;
-// }
-
-// .cinzel {
-//   font-family: $cinzel;
-// }
 
 @import "bootstrap/scss/bootstrap.scss";
 @import "bootstrap-icons/font/bootstrap-icons.scss";
