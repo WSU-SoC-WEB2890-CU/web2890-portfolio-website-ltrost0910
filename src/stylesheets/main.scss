@@ -46,9 +46,24 @@
   backdrop-filter: blur(4px) saturate(80%);
 }
 
-.decor-heading {
-  content: url("/fancy_underline.png");
-  width: 300px;
+.lt-circle-container {
+  width: 100%;
+  max-width: 250px; /* Ensures the circle-container does not exceed 250px */
+  height: auto; /* Set height to auto for responsive scaling */
+  aspect-ratio: 1/1; /* Maintains square aspect ratio */
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
+  display: flex; /* Centering the image */
+  align-items: center;
+  justify-content: center;
+}
+
+.lt-circle-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 // STYLE THE BACK TO TOP BUTTON
