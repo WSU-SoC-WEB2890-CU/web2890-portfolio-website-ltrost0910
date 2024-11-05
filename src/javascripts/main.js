@@ -77,3 +77,13 @@ document.addEventListener("DOMContentLoaded", function () {
 //   var alertElement = document.getElementById("successAlert")
 //   alertElement.classList.remove("d-none") // Remove the d-none class to show the alert
 // })
+
+//preload images js function
+function preloadImages(...images) {
+  images.forEach((imageUrl) => {
+    const img = new Image()
+    img.src = imageUrl
+  })
+}
+
+preloadImages("/LT_Logo.png", "/intro-section-hands-typing-unsplash.webp", "/lindat.jpg")
