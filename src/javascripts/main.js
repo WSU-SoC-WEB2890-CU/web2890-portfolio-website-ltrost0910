@@ -1,4 +1,3 @@
-//TODO - Your ES6 JavaScript code (if any) goes here
 import "bootstrap"
 
 // Ensure the DOM is fully loaded before running the script
@@ -9,6 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
     .then((text) => {
       let oldelem = document.querySelector("script#js_navmenu")
       let currentPage = document.querySelector("script#js_navmenu").getAttribute("page-name")
+      console.log("page-name= ", currentPage)
       let newelem = document.createElement("div")
       newelem.innerHTML = text
       oldelem.parentNode.replaceChild(newelem, oldelem)
@@ -19,6 +19,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const navLinks = document.querySelectorAll(".navbar-nav .nav-link") // Select all nav links
     navLinks.forEach((link) => {
       const linkId = link.getAttribute("id")
+      console.log("linkId tag2= ", linkId)
+      console.log("page-name tag2= ", currentPage)
       if (linkId === currentPage) {
         link.classList.add("active") // Set active class if it matches the current page
       } else {
@@ -71,7 +73,7 @@ document.addEventListener("DOMContentLoaded", function () {
 })
 
 //alert for contact form submit button
-document.getElementById("submitButton").addEventListener("click", function () {
-  var alertElement = document.getElementById("successAlert")
-  alertElement.classList.remove("d-none") // Remove the d-none class to show the alert
-})
+// document.getElementById("submitButton").addEventListener("click", function () {
+//   var alertElement = document.getElementById("successAlert")
+//   alertElement.classList.remove("d-none") // Remove the d-none class to show the alert
+// })
