@@ -19,115 +19,241 @@
 
     <!-- THE PORTFOLIO SECTION -->
     <section id="portfolio" class="">
-      <div class="container pt-5 px-5 pb-0 mb-0">
+      <div class="pt-5 px-5 pb-0 mb-0">
         <div class="row text-center">
           <h1 class="display-3 fw-bold">Portfolio Projects</h1>
           <div class="mb-4"></div>
-          <p class="lead mb-5">I need to change this to be the slideshow with thumbnails!</p>
+          <p class="lead mb-5">Take a look at my projects and live production sites</p>
         </div>
 
-        <div class="row card-row bg-secondary p-5 mb-4 border-dark g-4">
-          <div class="col-lg-4 col-md-6">
-            <div class="card">
-              <h4 class="card-title text-center pb-1">PROFESSIONAL</h4>
-              <img src="/portfolio/GSDOC_screenshot.png" alt="GSDOC screenshot" title="GSDOC screenshot" class="" />
-              <div class="card-body">
-                <h5 class="card-title text-center">Golden Spike Dog Club</h5>
-                <p class="card-text">I created this website from scratch for the club using Wordpress and HTML/CSS.</p>
+        <div class="bg-secondary p-5 mb-4 border border-dark">
+          <div id="slider">
+            <div id="custCarousel" class="carousel slide mx-auto" data-bs-ride="carousel">
+              <!-- SLIDES -->
+              <!-- Slide 1 -->
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <div class="row">
+                    <!-- Left: Image column -->
+                    <div class="col-md-6 carousel-image-col">
+                      <img
+                        src="/portfolio/GSDOC_screenshot.png"
+                        alt="GSDOC screenshot"
+                        title="GSDOC screenshot"
+                        class="img-fluid"
+                      />
+                    </div>
+                    <!-- Right: Text column -->
+                    <div class="col-md-6">
+                      <div class="carousel-text-col">
+                        <h2 class="mb-4">Project Details:</h2>
+                        <h5><strong>Name:</strong> Golden Spike Dog Obedience Club</h5>
+                        <h5><strong>Type:</strong> Professional</h5>
+                        <h5>
+                          <strong>Description:</strong> I created this website from scratch for the club using Wordpress
+                          and HTML/CSS.
+                        </h5>
+                        <h5><strong>Comment:</strong> This is the project I have chosen for my case study.</h5>
+                        <h5>
+                          <strong>Project Link:</strong> <a href="https://www.gsdoc.org/" target="_blank">See More</a>
+                        </h5>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="carousel-item">
+                  <div class="row">
+                    <div class="col-md-6 carousel-image-col">
+                      <img src="/portfolio/WeberDems_screenshot.png" alt="WeberDems screenshot" class="img-fluid" />
+                    </div>
+                    <div class="col-md-6 d-flex flex-column justify-content-center">
+                      <div class="carousel-text-col">
+                        <h2 class="mb-4">Project Details:</h2>
+                        <h5><strong>Name:</strong> Weber Democratic Party</h5>
+                        <h5><strong>Type:</strong> Professional</h5>
+                        <h5>
+                          <strong>Description:</strong> It's been an honor to develop and maintain this Wix site for our
+                          local Weber Democratic Party!
+                        </h5>
+                        <h5><strong>Comment:</strong> Here is a comment</h5>
+                        <h5>
+                          <strong>Project Link:</strong>
+                          <a href="https://www.weberdemocrats.org/" target="_blank">See More</a>
+                        </h5>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Slide 3 -->
+                <div class="carousel-item">
+                  <div class="row">
+                    <div class="col-md-6 carousel-image-col">
+                      <img src="/portfolio/Salazar_screenshot.png" alt="Salazar screenshot" class="img-fluid" />
+                    </div>
+                    <div class="col-md-6 d-flex flex-column justify-content-center">
+                      <div class="carousel-text-col">
+                        <h2 class="mb-4">Project Details:</h2>
+                        <h5><strong>Name:</strong> Salazar Restaurant</h5>
+                        <h5><strong>Type:</strong> School Project</h5>
+                        <h5>
+                          <strong>Description:</strong> This was a fun project that I revisited in a few WSU classes to
+                          develop a restaurant site.
+                        </h5>
+                        <h5><strong>Comment:</strong> Here is a comment</h5>
+                        <h5>
+                          <strong>Project Link:</strong>
+                          <a href="https://gregarious-mermaid-5cef8d.netlify.app/" target="_blank">See More</a>
+                        </h5>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Slide 4 -->
+                <div class="carousel-item">
+                  <div class="row">
+                    <div class="col-md-6 carousel-image-col">
+                      <img src="/portfolio/meal-app.png" alt="Meal App screenshot" class="img-fluid" />
+                    </div>
+                    <div class="col-md-6 d-flex flex-column justify-content-center">
+                      <div class="carousel-text-col">
+                        <h2 class="mb-4">Project Details:</h2>
+                        <h5><strong>Name:</strong> Meal App</h5>
+                        <h5><strong>Type:</strong> School Project</h5>
+                        <h5><strong>Description:</strong> Meal App</h5>
+                        <h5><strong>Comment:</strong> Here is a comment</h5>
+                        <h5>
+                          <strong>Project Link:</strong>
+                          <a href="https://melodic-kitsune-fe0594.netlify.app/" target="_blank">See More</a>
+                        </h5>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Slide 5 -->
+                <div class="carousel-item">
+                  <div class="row">
+                    <div class="col-md-6 carousel-image-col">
+                      <img src="/portfolio/recipe-box.png" alt="Recipe Box screenshot" class="img-fluid" />
+                    </div>
+                    <div class="col-md-6 d-flex flex-column justify-content-center">
+                      <div class="carousel-text-col">
+                        <h2 class="mb-4">Project Details:</h2>
+                        <h5><strong>Name:</strong> Recipe Box</h5>
+                        <h5><strong>Type:</strong> School Project</h5>
+                        <h5><strong>Description:</strong> Recipe Box</h5>
+                        <h5><strong>Comment:</strong> Here is a comment</h5>
+                        <h5>
+                          <strong>Project Link:</strong>
+                          <a href="https://chimerical-cannoli-52c5a0.netlify.app/" target="_blank">See More</a>
+                        </h5>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Slide 6 -->
+                <div class="carousel-item">
+                  <div class="row">
+                    <div class="col-md-6 carousel-image-col">
+                      <img src="/portfolio/weather-app.png" alt="Weather App screenshot" class="img-fluid" />
+                    </div>
+                    <div class="col-md-6 d-flex flex-column justify-content-center">
+                      <div class="carousel-text-col">
+                        <h2 class="mb-4">Project Details:</h2>
+                        <h5><strong>Name:</strong> Weather App</h5>
+                        <h5><strong>Type:</strong> School Project</h5>
+                        <h5><strong>Description:</strong> Weather App</h5>
+                        <h5><strong>Comment:</strong> Here is a comment</h5>
+                        <h5>
+                          <strong>Project Link:</strong>
+                          <a href="https://cosmic-cocada-a46c04.netlify.app/" target="_blank">See More</a>
+                        </h5>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div class="card-footer mx-auto">
-                <a href="https://www.gsdoc.org/" class="btn btn-primary" target="_blank">See More</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="card">
-              <h4 class="card-title text-center pb-1">PROFESSIONAL</h4>
-              <img
-                src="/portfolio/WeberDems_screenshot.png"
-                alt="WeberDems screenshot"
-                title="WeberDems screenshot"
-                class=""
-              />
-              <div class="card-body">
-                <h5 class="card-title text-center">Weber Democrats</h5>
-                <p class="card-text">
-                  It's been an honor to develop and maintain this Wix site for our local Weber Democratic Party!
-                </p>
-              </div>
-              <div class="card-footer mx-auto">
-                <a href="https://www.weberdemocrats.org/" class="btn btn-primary" target="_blank">See More</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="card">
-              <h4 class="card-title text-center pb-1">SCHOOL</h4>
-              <img
-                src="/portfolio/Salazar_screenshot.png"
-                alt="Salazar screenshot"
-                title="Salazar screenshot"
-                class=""
-              />
-              <div class="card-body">
-                <h5 class="card-title text-center">Salazar Restaurant</h5>
-                <p class="card-text">
-                  This was a fun project that I revisited in a few WSU classes to develop a restaurant site.
-                </p>
-              </div>
-              <div class="card-footer mx-auto">
-                <a href="https://gregarious-mermaid-5cef8d.netlify.app/" class="btn btn-primary" target="_blank"
-                  >See More</a
-                >
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="card">
-              <h4 class="card-title text-center pb-1">SCHOOL</h4>
-              <img src="/portfolio/meal-app.png" alt="Meal App screenshot" title="Meal App screenshot" class="" />
-              <div class="card-body">
-                <h5 class="card-title text-center">Meal App</h5>
-                <p class="card-text">Meal App</p>
-              </div>
-              <div class="card-footer mx-auto">
-                <a href="https://melodic-kitsune-fe0594.netlify.app/" class="btn btn-primary" target="_blank"
-                  >See More</a
-                >
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="card">
-              <h4 class="card-title text-center pb-1">SCHOOL</h4>
-              <img src="/portfolio/recipe-box.png" alt="Recipe Box screenshot" title="Recipe Box screenshot" class="" />
-              <div class="card-body">
-                <h5 class="card-title text-center">Recipe Box</h5>
-                <p class="card-text">Recipe Box</p>
-              </div>
-              <div class="card-footer mx-auto">
-                <a href="https://chimerical-cannoli-52c5a0.netlify.app/" class="btn btn-primary" target="_blank"
-                  >See More</a
-                >
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="card">
-              <h4 class="card-title text-center pb-1">SCHOOL</h4>
-              <img
-                src="/portfolio/weather-app.png"
-                alt="Weather App screenshot"
-                title="Weather App screenshot"
-                class=""
-              />
-              <div class="card-body">
-                <h5 class="card-title text-center">Weather App</h5>
-                <p class="card-text">Weather App</p>
-              </div>
-              <div class="card-footer mx-auto">
-                <a href="https://cosmic-cocada-a46c04.netlify.app/" class="btn btn-primary" target="_blank">See More</a>
-              </div>
+              <!-- Left right controls -->
+              <a class="carousel-control-prev" href="#custCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+              </a>
+              <a class="carousel-control-next" href="#custCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+              </a>
+
+              <!-- Thumbnails -->
+              <ol class="carousel-indicators list-inline">
+                <li class="list-inline-item active">
+                  <a id="carousel-selector-0" class="selected" data-bs-slide-to="0" data-bs-target="#custCarousel">
+                    <img
+                      src="/portfolio/GSDOC_screenshot.png"
+                      alt="GSDOC screenshot"
+                      title="GSDOC screenshot"
+                      class="img-fluid"
+                    />
+                  </a>
+                </li>
+
+                <li class="list-inline-item">
+                  <a id="carousel-selector-1" data-bs-slide-to="1" data-bs-target="#custCarousel">
+                    <img
+                      src="/portfolio/WeberDems_screenshot.png"
+                      alt="WeberDems screenshot"
+                      title="WeberDems screenshot"
+                      class="img-fluid"
+                    />
+                  </a>
+                </li>
+
+                <li class="list-inline-item">
+                  <a id="carousel-selector-2" data-bs-slide-to="2" data-bs-target="#custCarousel">
+                    <img
+                      src="/portfolio/Salazar_screenshot.png"
+                      alt="Salazar screenshot"
+                      title="Salazar screenshot"
+                      class="img-fluid"
+                    />
+                  </a>
+                </li>
+
+                <li class="list-inline-item">
+                  <a id="carousel-selector-3" data-bs-slide-to="3" data-bs-target="#custCarousel">
+                    <img
+                      src="/portfolio/meal-app.png"
+                      alt="Meal App screenshot"
+                      title="Meal App screenshot"
+                      class="img-fluid"
+                    />
+                  </a>
+                </li>
+
+                <li class="list-inline-item">
+                  <a id="carousel-selector-4" data-bs-slide-to="4" data-bs-target="#custCarousel">
+                    <img
+                      src="/portfolio/recipe-box.png"
+                      alt="Recipe Box screenshot"
+                      title="Recipe Box screenshot"
+                      class="img-fluid"
+                    />
+                  </a>
+                </li>
+
+                <li class="list-inline-item">
+                  <a id="carousel-selector-5" data-bs-slide-to="5" data-bs-target="#custCarousel">
+                    <img
+                      src="/portfolio/weather-app.png"
+                      alt="Weather App screenshot"
+                      title="Weather App screenshot"
+                      class="img-fluid"
+                    />
+                  </a>
+                </li>
+              </ol>
             </div>
           </div>
         </div>
