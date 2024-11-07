@@ -1,7 +1,7 @@
 #slider {
   //   background-color: #7b1fa2;
   //background-color: #fff;
-  //padding: 50px 0;
+  padding: 50px;
   margin: 20px;
 }
 
@@ -30,12 +30,17 @@
 
 .carousel-text-col {
   height: 100%;
-  padding: 3rem;
+  padding: 1rem;
   border: 0.5px solid #000; /* Thin border  */
   background-color: white;
 }
-.carousel-text-col h5 {
+.carousel-text-col h2 {
+  font-size: 1.5rem;
   margin-bottom: 1rem;
+}
+.carousel-text-col h5 {
+  font-size: 1rem;
+  //margin-bottom: 1rem;
 }
 
 .carousel-thumbnail-div {
