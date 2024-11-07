@@ -70,55 +70,6 @@
   object-position: center;
 }
 
-// STYLE THE BACK TO TOP BUTTON
-.back-to-top {
-  position: fixed;
-  width: 3rem;
-  height: 3rem;
-  right: 1.875rem;
-  bottom: 1.875rem;
-  z-index: 9999;
-  background-color: black;
-  color: white; /* Text or icon inside will be white */
-
-  filter: invert(0); /* Default, white icon on black background */
-  transition: filter 0.3s ease-in-out;
-
-  &:hover {
-    filter: invert(1); /* Inverts the color when hovered: black icon on white background */
-  }
-
-  i {
-    font-size: 1rem;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-}
-
-/* Default image size (for large screens) */
-footer img {
-  width: 100px; /* Default size */
-  height: 100px;
-}
-
-.contact-section {
-  padding: 4rem 0;
-}
-.contact-map {
-  height: 400px;
-  width: 100%;
-  border: none;
-}
-.contact-form-feedback {
-  color: #dc3545;
-  margin-top: 0.5rem;
-}
-.contact-form-success {
-  color: #28a745;
-}
-
 /* Styles for smaller screens */
 @media (max-width: 767px) {
   placeholder {
