@@ -41,14 +41,14 @@ const injectHTML = async (filePath, elementId) => {
 
 // Function to set active nav link based on the current path
 const setActiveNavLink = () => {
-  console.log("window.location.pathname**", window.location.pathname, "**")
+  //console.log("window.location.pathname**", window.location.pathname, "**")
   let currentPath = window.location.pathname.replace(/^\/|\/$/g, "") || "index"
   const navLinks = document.querySelectorAll(".navbar-nav .nav-link")
-  console.log("currentPath**", currentPath, "**")
+  //console.log("currentPath**", currentPath, "**")
 
   navLinks.forEach((link) => {
     const linkHref = link.getAttribute("href")
-    console.log("linkHref**", linkHref, "**")
+    //console.log("linkHref**", linkHref, "**")
     if (linkHref === currentPath) {
       link.classList.add("active")
     } else {
