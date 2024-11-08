@@ -13,9 +13,9 @@
   <body class="loading">
     <div id="body-content">
       <header>
-        <!-- Nav Menu and Hero in javascript main.js  -->
-        <script id="js_navmenu" page-name="about"></script>
-        <script id="js_hero"></script>
+        <!-- Nav Menu and Hero injected in javascript main.js  -->
+        <div id="navmenu"></div>
+        <div id="hero"></div>
       </header>
 
       <section id="aboutSection">
@@ -38,7 +38,7 @@
               <p>
                 Now, I enjoy taking one class per semester as a retirement hobby, and applying my new web skills to
                 design, develop and maintain websites for local groups and small businesses. Check out samples of my
-                work by clicking below!
+                work by viewing my <a href="portfolio.html">Portfolio</a> page!
               </p>
             </div>
 
@@ -52,9 +52,10 @@
         </div>
       </section>
 
-      <!-- Footer  in javascript main.js  -->
-      <script id="js_footer"></script>
+      <!-- Footer injected in javascript main.js  -->
+      <div id="footer"></div>
     </div>
-    <script type="module" src="./javascripts/main.js"></script>
+    <!-- Main JavaScript file with `defer` to avoid blocking the page rendering -->
+    <script type="module" src="./javascripts/main.js" defer></script>
   </body>
 </html>

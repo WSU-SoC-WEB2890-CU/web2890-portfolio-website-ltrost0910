@@ -4,56 +4,7 @@ import { showLoadingScreen, loadFontsAndRemoveLoadingScreen } from "./loading-sc
 // Preload images
 preloadImages("/LT_Logo.png", "/intro-section-hands-typing-unsplash.webp", "/lindat.jpg")
 
-// Function to inject HTML content
-document.addEventListener("DOMContentLoaded", function () {
-  // Show the loading screen once the DOM is loaded
-  showLoadingScreen()
-
-  // Check if the navmenu script element exists and get the currentPage value
-  let currentPage = null
-  const navmenuElem = document.querySelector("script#js_navmenu")
-  if (navmenuElem) {
-    currentPage = navmenuElem.getAttribute("page-name")
-  }
-
-  // Function to inject HTML content and return a promise
-  const injectHTML = (filePath, elementId) => {
-    return fetch(filePath)
-      .then((res) => res.text())
-      .then((text) => {
-        let oldelem = document.querySelector(`script#${elementId}`)
-        let newelem = document.createElement("div")
-        newelem.innerHTML = text
-        oldelem.parentNode.replaceChild(newelem, oldelem)
-        return text // Return text for possible chaining
-      })
-  }
-
-  // Create an array of promises for the HTML injections
-  const htmlPromises = [
-    injectHTML("../navmenu.html", "js_navmenu"),
-    injectHTML("../hero.html", "js_hero"),
-    injectHTML("../footer.html", "js_footer"),
-  ]
-
-  // Wait for all HTML content to be injected
-  Promise.all(htmlPromises)
-    .then(() => {
-      // Once the content is injected, set the active nav link if currentPage is available
-      if (currentPage) {
-        setActiveNavLinkFromVar(currentPage)
-      }
-
-      // Once the content is injected, load fonts and remove the loading screen
-      loadFontsAndRemoveLoadingScreen()
-    })
-    .catch((error) => {
-      console.error("Error injecting HTML content:", error)
-      loadFontsAndRemoveLoadingScreen() // Proceed even if there's an error with content injection
-    })
-})
-
-// Preload images function
+// Function to preload images
 function preloadImages(...images) {
   images.forEach((imageUrl) => {
     const img = new Image()
@@ -61,15 +12,62 @@ function preloadImages(...images) {
   })
 }
 
-// Set active class on nav menu
-function setActiveNavLinkFromVar(currentPage) {
-  const navLinks = document.querySelectorAll(".navbar-nav .nav-link") // Select all nav links
+// Toggle caching for testing purposes (set this to false to disable caching)
+const cacheEnabled = false // Change to `false` to bypass caching, true to use caching
+
+// Async function to inject HTML content with caching
+const injectHTML = async (filePath, elementId) => {
+  try {
+    // Check if caching is enabled
+    let cachedContent = null
+    if (cacheEnabled) {
+      cachedContent = sessionStorage.getItem(filePath) // Look for cached content
+    }
+    if (!cachedContent) {
+      const response = await fetch(filePath)
+      if (!response.ok) throw new Error(`Failed to fetch ${filePath}`)
+      cachedContent = await response.text()
+      sessionStorage.setItem(filePath, cachedContent)
+    }
+    // Inject the content into the designated element
+    const container = document.getElementById(elementId)
+    if (container) {
+      container.innerHTML = cachedContent
+    }
+  } catch (error) {
+    console.error(`Error injecting ${filePath}:`, error)
+  }
+}
+
+// Function to set active nav link based on the current path
+const setActiveNavLink = () => {
+  const currentPath = window.location.pathname === "/" ? "index.html" : window.location.pathname.split("/").pop()
+  const navLinks = document.querySelectorAll(".navbar-nav .nav-link")
+
   navLinks.forEach((link) => {
-    const linkId = link.getAttribute("id")
-    if (linkId === currentPage) {
-      link.classList.add("active") // Set active class if it matches the current page
+    const linkHref = link.getAttribute("href").split("/").pop()
+    if (linkHref === currentPath) {
+      link.classList.add("active")
     } else {
-      link.classList.remove("active") // Remove active class from other links
+      link.classList.remove("active")
     }
   })
 }
+
+// Main logic to load content after DOM is ready
+document.addEventListener("DOMContentLoaded", async () => {
+  showLoadingScreen() // do this first
+  try {
+    // Inject all HTML content concurrently
+    await Promise.all([
+      injectHTML("../navmenu.html", "navmenu"),
+      injectHTML("../hero.html", "hero"),
+      injectHTML("../footer.html", "footer"),
+    ])
+  } catch (error) {
+    console.error("Error injecting HTML content:", error)
+  } finally {
+    setActiveNavLink()
+    loadFontsAndRemoveLoadingScreen()
+  }
+})
