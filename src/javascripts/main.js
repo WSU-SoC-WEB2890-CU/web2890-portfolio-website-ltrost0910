@@ -13,7 +13,7 @@ function preloadImages(...images) {
 }
 
 // Toggle caching for testing purposes (set this to false to disable caching)
-const cacheEnabled = false // Change to `false` to bypass caching, true to use caching
+const cacheEnabled = true // Change to `false` to bypass caching, true to use caching
 
 // Async function to inject HTML content with caching
 const injectHTML = async (filePath, elementId) => {
