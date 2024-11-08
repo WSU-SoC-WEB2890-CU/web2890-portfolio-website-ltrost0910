@@ -48,6 +48,7 @@ const setActiveNavLink = () => {
 
   navLinks.forEach((link) => {
     const linkHref = link.getAttribute("href").split("/").pop()
+    console.log("linkHref**", linkHref, "**")
     if (linkHref === currentPath) {
       link.classList.add("active")
     } else {
