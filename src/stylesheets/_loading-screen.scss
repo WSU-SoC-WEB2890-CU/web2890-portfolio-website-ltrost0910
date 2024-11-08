@@ -1,0 +1,60 @@
+/* Initially hide everything except the loading screen */
+body.loading > *:not(#loading-screen) {
+  display: none;
+}
+
+/* Style for the loading screen */
+#loading-screen {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+  color: #333;
+  z-index: 9999; /* Ensure it's on top of all other content */
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* Spinner container to center everything */
+.spinner-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Spinner styles wrapping around the logo */
+.spinner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-top: 4px solid #333;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  animation: spin 1s linear infinite;
+  position: relative;
+}
+
+/* Style for the logo inside the spinner */
+.spinnerlogo {
+  width: 60px;
+  position: absolute; /* Center the logo inside the spinner */
+}
+
+/* Spinner animation */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

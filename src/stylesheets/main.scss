@@ -4,9 +4,9 @@
 @import "card";
 @import "carousel";
 @import "footer";
+@import "loading-screen";
 
-//header navmenu company title
-//only show on very small screens
+// header navmenu company title -- only show on very small screens
 .responsive-short {
   display: none;
 }
