@@ -2,7 +2,7 @@ import FontFaceObserver from "fontfaceobserver"
 
 // Preload images
 
-preloadImages("/images/LT_Logo.png")
+preloadImages("/LT_Logo.png")
 
 // Function to preload images
 function preloadImages(...images) {
@@ -24,7 +24,7 @@ function preloadImages(...images) {
 const loadingScreenHTML = `
   <div id="loading-screen">
     <div class="spinner-container">
-      <img src="/images/LT_Logo.png" alt="Logo" class="spinnerlogo" />
+      <img src="/LT_Logo.png" alt="Logo" class="spinnerlogo" />
       <div class="spinner"></div>
     </div>
     Loading

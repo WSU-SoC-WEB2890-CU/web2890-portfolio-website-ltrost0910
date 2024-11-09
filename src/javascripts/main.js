@@ -2,7 +2,7 @@ import "bootstrap"
 import { showLoadingScreen, loadFontsAndRemoveLoadingScreen } from "./loading-screen.js"
 
 // Preload images
-preloadImages("/images/LT_Logo.png", "/images/intro-section-hands-typing-unsplash.webp", "/images/lindat.jpg")
+preloadImages("/LT_Logo.png", "/intro-section-hands-typing-unsplash.webp", "/lindat.jpg")
 
 // Function to preload images
 function preloadImages(...images) {
