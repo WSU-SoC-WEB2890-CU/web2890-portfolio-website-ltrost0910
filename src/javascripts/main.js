@@ -13,7 +13,7 @@ function preloadImages(...images) {
 }
 
 // Toggle caching for testing purposes (set this to false to disable caching)
-const cacheEnabled = true // Change to `false` to bypass caching, true to use caching
+const cacheEnabled = false // Change to `false` to bypass caching, true to use caching
 
 // Async function to inject HTML content with caching
 const injectHTML = async (filePath, elementId) => {
@@ -41,15 +41,14 @@ const injectHTML = async (filePath, elementId) => {
 
 // Function to set active nav link based on the current path
 const setActiveNavLink = () => {
-  //console.log("window.location.pathname**", window.location.pathname, "**")
-  let currentPath = window.location.pathname.replace(/^\/|\/$/g, "") || "index"
+  const currentPage = document.querySelector("div#body-content").getAttribute("page-name")
+  console.log("currentPage=", currentPage)
   const navLinks = document.querySelectorAll(".navbar-nav .nav-link")
-  //console.log("currentPath**", currentPath, "**")
 
   navLinks.forEach((link) => {
-    const linkHref = link.getAttribute("href")
-    //console.log("linkHref**", linkHref, "**")
-    if (linkHref === currentPath) {
+    console.log("link=", link)
+    const linkId = link.getAttribute("id")
+    if (linkId === currentPage) {
       link.classList.add("active")
     } else {
       link.classList.remove("active")
