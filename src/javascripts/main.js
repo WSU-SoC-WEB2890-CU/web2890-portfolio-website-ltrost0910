@@ -2,7 +2,7 @@ import "bootstrap"
 import { showLoadingScreen, loadFontsAndRemoveLoadingScreen } from "./loading-screen.js"
 
 // Preload images
-preloadImages("/LT_Logo.png", "/intro-section-hands-typing-unsplash.webp", "/lindat.jpg")
+preloadImages("/images/LT_Logo.png", "/images/intro-section-hands-typing-unsplash.webp", "/images/lindat.jpg")
 
 // Function to preload images
 function preloadImages(...images) {
@@ -42,11 +42,11 @@ const injectHTML = async (filePath, elementId) => {
 // Function to set active nav link based on the current path
 const setActiveNavLink = () => {
   const currentPage = document.querySelector("div#body-content").getAttribute("page-name")
-  console.log("currentPage=", currentPage)
+  //console.log("currentPage=", currentPage)
   const navLinks = document.querySelectorAll(".navbar-nav .nav-link")
 
   navLinks.forEach((link) => {
-    console.log("link=", link)
+    //console.log("link=", link)
     const linkId = link.getAttribute("id")
     if (linkId === currentPage) {
       link.classList.add("active")

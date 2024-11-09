@@ -17,7 +17,7 @@ glob
 
 export default defineConfig({
   root: "src",
-  publicDir: "../images",
+  publicDir: "../public", // Explicitly define the public directory
   build: {
     manifest: true,
     outDir: "../dist",

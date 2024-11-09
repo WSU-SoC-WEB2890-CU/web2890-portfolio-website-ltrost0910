@@ -1,13 +1,22 @@
 import FontFaceObserver from "fontfaceobserver"
 
 // Preload images
-preloadImages("/LT_Logo.png")
+
+preloadImages("/images/LT_Logo.png")
 
 // Function to preload images
 function preloadImages(...images) {
   images.forEach((imageUrl) => {
     const img = new Image()
     img.src = imageUrl
+
+    // img.onload = () => {
+    //   console.log(`Image found: ${imageUrl}`)
+    // }
+
+    // img.onerror = () => {
+    //   console.log(`Image not found: ${imageUrl}`)
+    // }
   })
 }
 
@@ -15,7 +24,7 @@ function preloadImages(...images) {
 const loadingScreenHTML = `
   <div id="loading-screen">
     <div class="spinner-container">
-      <img src="/LT_Logo.png" alt="Logo" class="spinnerlogo" />
+      <img src="/images/LT_Logo.png" alt="Logo" class="spinnerlogo" />
       <div class="spinner"></div>
     </div>
     Loading
