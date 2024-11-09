@@ -1,5 +1,16 @@
 import FontFaceObserver from "fontfaceobserver"
 
+// Preload images
+preloadImages("/LT_Logo.png")
+
+// Function to preload images
+function preloadImages(...images) {
+  images.forEach((imageUrl) => {
+    const img = new Image()
+    img.src = imageUrl
+  })
+}
+
 // Define the loading screen HTML as a string
 const loadingScreenHTML = `
   <div id="loading-screen">
