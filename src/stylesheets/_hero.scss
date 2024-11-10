@@ -30,13 +30,18 @@
   padding: 0;
 }
 
-/* Set the image as a background */
-.hero-image-column img {
+/* set wrapper to move to the left */
+.hero-image-wrapper {
+  height: 60vh;
   width: 50%;
   margin-left: 50%;
-  height: 100%;
+  overflow: hidden;
+}
+
+/* Set the image as a background */
+.hero-image-column img {
   object-fit: cover;
-  display: block; /* Avoid gaps due to inline spacing */
+  object-position: center bottom;
 }
 
 /* Responsive Adjustments */
