@@ -1,3 +1,4 @@
+import "bootstrap"
 import { showLoadingScreen, loadFontsAndRemoveLoadingScreen } from "./loading-screen.js"
 
 // Preload images
