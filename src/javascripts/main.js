@@ -1,22 +1,14 @@
 import "bootstrap"
-import { showLoadingScreen, loadFontsAndRemoveLoadingScreen } from "./loading-screen.js"
+import { showLoadingScreen, removeLoadingScreen } from "./loading-screen.js"
 
 // Preload images
-preloadImages("/LT_Logo.png", "/intro-section-hands-typing-unsplash.webp", "/lindat.jpg")
+preloadImages("/LT_Logo.png")
 
 // Function to preload images
 function preloadImages(...images) {
   images.forEach((imageUrl) => {
     const img = new Image()
     img.src = imageUrl
-
-    // img.onload = () => {
-    //   console.log(`Image found: ${imageUrl}`)
-    // }
-
-    // img.onerror = () => {
-    //   console.log(`Image not found: ${imageUrl}`)
-    // }
   })
 }
 
@@ -68,6 +60,6 @@ document.addEventListener("DOMContentLoaded", async () => {
     console.error("Error injecting HTML content:", error)
   } finally {
     setActiveNavLink()
-    loadFontsAndRemoveLoadingScreen()
+    removeLoadingScreen()
   }
 })

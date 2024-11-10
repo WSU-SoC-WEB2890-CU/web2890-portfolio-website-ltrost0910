@@ -1,5 +1,3 @@
-import FontFaceObserver from "fontfaceobserver"
-
 // Define the loading screen HTML as a string
 const loadingScreenHTML = `
   <div id="loading-screen">
@@ -17,28 +15,14 @@ export function showLoadingScreen() {
   document.body.classList.add("loading") // Ensure body is in 'loading' state
 }
 
-// Function to remove the loading screen
-export function hideLoadingScreen() {
+// Combined function to remove the loading screen
+export function removeLoadingScreen() {
+  // Remove the 'loading' class from the body
+  document.body.classList.remove("loading")
+
+  // Remove the loading screen element from the DOM
   const loadingScreen = document.getElementById("loading-screen")
   if (loadingScreen) {
     loadingScreen.remove()
   }
-}
-
-// Function to handle font loading with FontFaceObserver
-export function loadFontsAndRemoveLoadingScreen() {
-  const poppins = new FontFaceObserver("Poppins")
-  const montserrat = new FontFaceObserver("Montserrat")
-  const cinzel = new FontFaceObserver("Cinzel")
-  const cinzelDecorative = new FontFaceObserver("Cinzel Decorative")
-
-  Promise.all([poppins.load(), montserrat.load(), cinzel.load(), cinzelDecorative.load()])
-    .then(() => {
-      document.body.classList.remove("loading")
-      hideLoadingScreen() // Remove the loading screen after fonts are loaded
-    })
-    .catch((error) => {
-      console.error("Font loading failed:", error)
-      hideLoadingScreen() // Ensure the loading screen is removed even if fonts fail
-    })
 }
