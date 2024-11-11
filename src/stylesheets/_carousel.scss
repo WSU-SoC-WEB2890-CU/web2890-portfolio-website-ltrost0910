@@ -46,7 +46,31 @@
 }
 .carousel-text-col h5 {
   font-size: 1rem;
-  //margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+  /* bootstrap medium and below */
+  .carousel-text-col h2 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  .carousel-text-col h5 {
+    font-size: 0.75rem;
+  }
+  #custCarousel .carousel-indicators li img {
+    height: 25px !important; // Uniform height for thumbnails
+    width: 25px !important;
+  }
+}
+@media (max-width: 320px) {
+  /* bootstrap small and below */
+  .carousel-text-col h2 {
+    font-size: 0.75rem;
+    margin-bottom: 0.5rem;
+  }
+  .carousel-text-col h5 {
+    font-size: 1rem;
+  }
 }
 
 /* Thumbnail indicator styling */
