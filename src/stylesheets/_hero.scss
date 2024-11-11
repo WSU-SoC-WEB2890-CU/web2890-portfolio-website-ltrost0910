@@ -1,22 +1,21 @@
 /* Hero Container */
 .heroContainer {
   position: relative;
-  height: 100%;
   width: 100%;
   margin: 0;
+  height: 500px; /* Set the fixed height */
 }
 
 /* Text Column with Angled Edge */
 .hero-text-column {
-  background-color: $secondary;
-  // need to set background color for clip-path to appear
+  background-color: $secondary; /* Background color for clip-path */
   padding: 60px;
   clip-path: polygon(0 0, calc(100% - 75px) 0, 100% 100%, 0 100%);
   position: absolute;
   top: 0;
   left: 0;
-  width: 60%; /* Adjust width as needed */
-  height: 60vh; /* Adjust height as needed */
+  width: 60%; /* Width of the text column */
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -25,7 +24,7 @@
 
 /* Image Column */
 .hero-image-column {
-  height: 60vh; /* Adjust height as needed */
+  height: 100%;
   width: 100%;
   padding: 0;
 }
@@ -36,35 +35,33 @@
   margin-left: 50%;
   //height: 100%;
   object-fit: cover;
+  object-position: center bottom;
 }
 
 /* Responsive Adjustments */
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .hero-text-column {
     position: relative; /* Remove absolute positioning for smaller screens */
     width: 100%;
     padding: 20px;
     clip-path: none; /* Remove clip-path for smaller screens */
-    min-height: 20vh; /* Adjust as needed */
+    /*  min-height: 20vh; Adjust height for mobile screens */
     height: auto; /* Allow natural height */
     overflow-x: hidden;
-
-    /* Set background image add dark gradient overlay */
+    display: block; /* Ensure block-level behavior */
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
       url("/intro-section-hands-typing-unsplash-resized.webp");
     background-size: cover; /* Cover the whole container */
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Prevent tiling */
-    /* Change text color to white */
-    color: white;
   }
-  /* Override specific child elements if needed */
+  /* Apply text alignment and color to all elements inside hero-text-column */
   .hero-text-column h1,
   .hero-text-column h3,
   .hero-text-column p {
-    color: white;
+    text-align: center !important;
+    color: white !important;
   }
-
   /* Hide the image column on smaller screens */
   .hero-image-column {
     display: none;
@@ -79,24 +76,25 @@
 .slice-container::before {
   content: "";
   width: 100%;
-  height: 100px; /* Adjusted height */
+  height: 100px; /* Adjust height for the slice effect */
   position: absolute;
   bottom: -1px;
   left: 0;
-  background-size: 100% 100%; /* This stretches the SVG to fill the container */
+  background-size: 100% 100%; /* Stretches the SVG to fill the container */
   background-repeat: no-repeat;
   background-position: bottom;
   background-image: url("data:image/svg+xml;utf8,<svg width='231' height='52' xmlns='http://www.w3.org/2000/svg'><g><path transform='rotate(-179.773 115.448 27.3774)' stroke-width='0' d='M0.08091,3.61438 L0.32517,52.61419 L230.81532,2.14056 L0.08091,3.61438 Z' fill='%23fdf8e1'/></g></svg>");
 }
 
-@media (max-width: 850px) {
+@media (max-width: 768px) {
   .slice-container::before {
     height: 78px;
   }
 }
 
 .wave-container {
-  height: 10vh;
+  height: 100px;
+  width: 100%;
   background-color: #fdf8e1;
   position: relative;
 }
@@ -110,11 +108,17 @@
   left: 0;
   background-size: auto;
   background-repeat: repeat no-repeat;
-  background-position: 63vw bottom;
+  background-position: bottom;
   background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 1200  134' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M0 98L50 92C100 86 200 74 300 50C400 26 500 -10 600 2C700 14 800 74 900 98C1000 122 1100 110 1150 104L1200 98V134H1150C1100 134 1000 134 900 134C800 134 700 134 600 134C500 134 400 134 300 134C200 134 100 134 50 134H0V98Z' fill='%23ffffff' /></svg>");
 }
+.wave-container svg {
+  width: 100%;
+}
 
-@media (max-width: 850px) {
+@media (max-width: 768px) {
+  .wave-container {
+    height: 100px;
+  }
   .wave-container::before {
     height: 78px;
   }
