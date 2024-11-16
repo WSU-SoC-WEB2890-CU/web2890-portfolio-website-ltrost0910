@@ -21,6 +21,14 @@
   justify-content: center;
   align-items: flex-start;
 }
+@media (min-width: 992px) {
+  // Bootstrap's lg breakpoint
+  .hero-text-paragraph {
+    width: 70%;
+    margin-inline-start: auto; // Aligns paragraph to the left under headings
+    margin-top: 3rem !important;
+  }
+}
 
 /* Image Column */
 .hero-image-column {
