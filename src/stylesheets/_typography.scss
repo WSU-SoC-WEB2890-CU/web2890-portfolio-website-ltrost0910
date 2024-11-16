@@ -1,5 +1,4 @@
 // Import your font variables
-$hero-h1-size: 96px;
 $hero-name-h1-size: 60px;
 $h1-size: 48px;
 $h2-size: 36px;
@@ -8,11 +7,6 @@ $h4-size: 24px;
 $p-size: 16px;
 
 // Hero Headings
-h1.hero-text {
-  font-family: $poppins;
-  font-size: $hero-h1-size;
-  font-weight: 400; // Regular
-}
 
 h1.hero-name {
   font-family: $cinzel;
@@ -74,8 +68,7 @@ p {
 }
 
 //examples of using these styles in html
-// <h1 class="hero-text">Hero Heading in Poppins, 96px</h1>
-// <h1 class="hero-name">Hero Name Heading in Cinzel, 90px</h1>
+// <h1 class="hero-name">Hero Name Heading in Cinzel, 60px</h1>
 // <h1>Regular H1 in Poppins, 48px, Bold</h1>
 // <h2>Regular H2 in Poppins, 36px, Bold</h2>
 // <h3>Regular H3 in Poppins, 30px, Medium</h3>
