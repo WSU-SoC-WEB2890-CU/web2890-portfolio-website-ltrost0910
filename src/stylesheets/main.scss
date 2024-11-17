@@ -50,7 +50,9 @@
 }
 
 .lt-circle-container {
-  border: 0.1px solid lightgrey; /* Thin border around circle */
+  border: 5px solid $secondary; /* border around circle */
+  outline: 10px solid $primary;
+  outline-offset: 1px;
   width: 100%;
   max-width: 250px; /* Ensures the circle-container does not exceed 250px */
   height: auto; /* Set height to auto for responsive scaling */
