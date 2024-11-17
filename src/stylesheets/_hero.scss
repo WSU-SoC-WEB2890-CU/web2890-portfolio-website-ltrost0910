@@ -6,13 +6,6 @@
   height: 500px; /* Set the fixed height */
 }
 
-@media (max-width: 840.98px) {
-  h1.hero-name,
-  .hero-name.h1 {
-    font-size: 48px;
-  }
-}
-
 /* Text Column with Angled Edge */
 .hero-text-column {
   background-color: $secondary; /* Background color for clip-path */
