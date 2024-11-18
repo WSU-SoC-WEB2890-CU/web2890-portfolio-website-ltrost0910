@@ -64,7 +64,7 @@
   }
 }
 @media (max-width: 320px) {
-  /* bootstrap small and below */
+  /* bootstrap x-small and below */
   .carousel-text-col h2 {
     font-size: 0.75rem;
     margin-bottom: 0.5rem;
@@ -135,4 +135,28 @@
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
   background-size: 100%;
+}
+
+@media (max-width: 320px) {
+  /* bootstrap x-small and below */
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: 40px;
+    height: 40px;
+  }
+  .carousel-control-prev {
+    left: -10px;
+  }
+  .carousel-control-next {
+    right: -10px;
+  }
+  .carousel-text-col {
+    max-height: 100%;
+  }
+  .carousel-text-col h5 {
+    font-size: $p-size-sm;
+  }
+  .carousel-text-col h2 {
+    font-size: $h4-size-sm;
+  }
 }
