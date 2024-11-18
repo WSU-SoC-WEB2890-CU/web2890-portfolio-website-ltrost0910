@@ -35,12 +35,7 @@
   }
 }
 
-/* Large screens and above (screens larger than 992px) */
-@media (min-width: 992px) {
-  .card img {
-    height: 400px; /* Large screens */
-  }
-}
+/* Large screens and above (screens larger than 992px) @media (min-width: 992px) */
 
 /* Card title styling */
 .card-title {
