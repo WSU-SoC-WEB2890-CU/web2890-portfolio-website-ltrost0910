@@ -72,6 +72,36 @@
   object-position: center;
 }
 
+.divider {
+  position: relative;
+  height: 1px;
+}
+
+.div-transparent:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 20%; /* Reduce width by increasing left/right */
+  right: 20%;
+  width: 60%; /* Explicit width for clarity */
+  height: 1px;
+  background-image: linear-gradient(to right, transparent, rgb(48, 49, 51), transparent);
+}
+
+.div-dot:after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: -5px; /* Adjust position for a smaller dot */
+  left: calc(50% - 6px); /* Align smaller dot */
+  width: 12px; /* Reduce size of the dot was 18px */
+  height: 12px;
+  background-color: goldenrod;
+  border: 1px solid rgb(48, 49, 51);
+  border-radius: 50%;
+  box-shadow: inset 0 0 0 1px white, 0 0 0 2px white;
+}
+
 /* Styles for smaller screens */
 @media (max-width: 767px) {
   placeholder {
