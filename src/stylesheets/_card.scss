@@ -2,8 +2,8 @@
 
 /* Card styling */
 .card {
-  border: 1px solid #000; /* Thin border around card */
-  border-radius: 0; /* No rounded corners */
+  border: 0.5px solid #d3d3d3; /* Thin border around card */
+  border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
   transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
