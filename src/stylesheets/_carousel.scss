@@ -1,3 +1,7 @@
+#slider {
+  padding: 50px;
+  margin: 20px;
+}
 .carousel-item .row {
   display: flex;
   align-items: stretch; /* Ensure columns align in height */
@@ -142,8 +146,10 @@
     font-size: 0.8rem;
   }
   #slider {
-    padding: 100px !important;
-    margin: 100px !important;
+    padding-left: 100px !important;
+    margin-left: 100px !important;
+    padding-right: 100px !important;
+    margin-right: 100px !important;
   }
 }
 /* For xxl-large screens (1400 is xxl) */
@@ -156,7 +162,9 @@
     font-size: 0.9rem;
   }
   #slider {
-    padding: 150px !important;
-    margin: 150px !important;
+    padding-left: 150px !important;
+    margin-left: 150px !important;
+    padding-right: 150px !important;
+    margin-right: 150px !important;
   }
 }

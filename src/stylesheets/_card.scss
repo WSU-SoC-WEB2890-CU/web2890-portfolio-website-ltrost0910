@@ -3,7 +3,7 @@
 /* Card styling */
 .card {
   border: 0.5px solid #d3d3d3; /* Thin border around card */
-  border-radius: 8px;
+  // border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
   transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
@@ -23,25 +23,9 @@
   object-position: center top;
   border: 1px solid #d3d3d3; /* Add border around the image */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
-  border-radius: 8px; /* Optional: add rounded corners */
+  /*border-radius: 8px;  Optional: add rounded corners */
   /* padding: 1px; Optional: space between the image and border */
   box-sizing: border-box; /* Ensure padding and border are included in the element's dimensions */
-}
-/* Medium screens and above (screens larger than 767px) */
-@media (min-width: 768px) {
-  .card img {
-    height: 300px; /* Medium screens */
-  }
-}
-
-/* Large screens and above (screens larger than 992px) @media (min-width: 992px) */
-@media (min-width: 992px) {
-  .card {
-    width: 75%;
-  }
-  .card img {
-    height: 300px; /* Medium screens */
-  }
 }
 
 /* Card title styling */
@@ -61,11 +45,17 @@
 .card-text {
   color: #666666;
   font-size: 0.9rem;
-  margin-bottom: 15px;
 }
 
+.card-body-wrapper {
+  display: flex;
+  flex-direction: column;
+  // align-items: center; center vertically
+  /* justify-content: center; Center the content horizontally */
+}
 .card-footer {
   background-color: inherit;
   border: none;
+  margin-top: auto; /* Push to the bottom in a flex parent */
   margin-bottom: 0.5rem;
 }
