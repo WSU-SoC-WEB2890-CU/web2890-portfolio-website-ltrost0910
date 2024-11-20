@@ -63,3 +63,20 @@ document.addEventListener("DOMContentLoaded", async () => {
     removeLoadingScreen()
   }
 })
+
+//contact form message trap
+document.getElementById("contactForm").addEventListener("submit", function (event) {
+  event.preventDefault() // Prevent the default form submission behavior
+
+  // Show the message notice
+  const messageNotice = document.getElementById("messageNotice")
+  messageNotice.style.display = "block"
+
+  // Optional: Clear the form fields
+  this.reset()
+
+  // Optional: Hide the notice after a few seconds
+  setTimeout(() => {
+    messageNotice.style.display = "none"
+  }, 3000) // 3 seconds
+})
