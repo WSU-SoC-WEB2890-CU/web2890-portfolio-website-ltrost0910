@@ -21,18 +21,18 @@
   height: 300px; /* Fixed height for consistent card size */
   object-fit: cover;
   object-position: center top;
-  border: 1px solid #d3d3d3; /* Add border around the image */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  border: 1px solid $primary; /* #d3d3d3 Add border around the image */
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  Soft shadow */
   /*border-radius: 8px;  Optional: add rounded corners */
-  /* padding: 1px; Optional: space between the image and border */
+  padding: 1px; /* Optional: space between the image and border */
   box-sizing: border-box; /* Ensure padding and border are included in the element's dimensions */
 }
 
 /* Card title styling */
 .card-title {
   font-family: "Poppins";
-  font-weight: 600;
-  color: #333333; /* Darker color for contrast */
+  font-weight: 400; /* normal */
+  /* color: #333333; Darker color for contrast */
   font-size: 1.5rem;
 }
 
