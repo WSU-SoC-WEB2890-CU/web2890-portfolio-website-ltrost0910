@@ -46,6 +46,33 @@ const setActiveNavLink = () => {
   })
 }
 
+// Function to handle anchor scrolling
+const scrollToAnchor = () => {
+  const hash = window.location.hash
+  if (hash) {
+    const scrollToTarget = () => {
+      const target = document.querySelector(hash)
+      if (target) {
+        target.scrollIntoView({ behavior: "smooth" })
+      }
+    }
+
+    // Try immediately, but also observe for dynamically loaded content
+    scrollToTarget()
+
+    // Observe for when the content gets injected
+    const observer = new MutationObserver(() => {
+      const target = document.querySelector(hash)
+      if (target) {
+        target.scrollIntoView({ behavior: "smooth" })
+        observer.disconnect() // Stop observing once we find the target
+      }
+    })
+
+    observer.observe(document.body, { childList: true, subtree: true })
+  }
+}
+
 // Main logic to load content after DOM is ready
 document.addEventListener("DOMContentLoaded", async () => {
   showLoadingScreen() // do this first
@@ -60,6 +87,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     console.error("Error injecting HTML content:", error)
   } finally {
     setActiveNavLink()
+    scrollToAnchor() // Scroll to the anchor after everything is injected
     removeLoadingScreen()
   }
 })
