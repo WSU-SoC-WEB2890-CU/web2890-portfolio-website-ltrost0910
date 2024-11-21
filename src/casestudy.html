@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Trost Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="index,follow" />
+    <meta name="description" content="A portfolio of work by Linda Trost" />
+    <title>Linda Trost Portfolio</title>
+    <link rel="preload" href="/intro-section-hands-typing-unsplash-resized.webp" as="image" />
+    <link rel="preload" href="/LT_Logo.png" as="image" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./stylesheets/main.scss" />
+  </head>
+
+  <body class="loading">
+    <div id="body-content" page-name="portfolio">
+      <header>
+        <div id="navmenu"></div>
+        <!-- <div id="hero"></div> -->
+      </header>
+
+      <header class="bg-secondary text-dark text-center py-5">
+        <div class="container">
+          <h1 class="display-4">Case Study: Project Name</h1>
+          <p class="lead">An overview of my role, challenges, and the results of this project.</p>
+        </div>
+      </header>
+
+      <main class="container my-5">
+        <!-- Overview Section -->
+        <section class="mb-5">
+          <h2 class="h4 text-uppercase mb-3">Overview</h2>
+          <div class="row">
+            <div class="col-md-4">
+              <p><strong>Client/Context:</strong> Personal Portfolio Project</p>
+            </div>
+            <div class="col-md-4">
+              <p><strong>Role:</strong> Frontend Developer</p>
+            </div>
+            <div class="col-md-4">
+              <p><strong>Tools:</strong> Bootstrap, SCSS, JavaScript</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Problem Statement -->
+        <section class="mb-5">
+          <h2 class="h4 text-uppercase mb-3">Problem Statement</h2>
+          <p>
+            The client needed a visually engaging, responsive portfolio site to showcase their projects and attract
+            potential clients. The site had to reflect their personal branding and deliver an intuitive user experience.
+          </p>
+        </section>
+
+        <!-- Solution Section -->
+        <section class="mb-5">
+          <h2 class="h4 text-uppercase mb-3">Solution</h2>
+          <p>
+            I designed and developed a mobile-first, visually appealing website using a modular SCSS architecture and
+            Bootstrap for a consistent layout. Key features include:
+          </p>
+          <ul>
+            <li>A responsive, full-width hero section with overlapping text and image.</li>
+            <li>A Bootstrap-based portfolio carousel with uniform image heights.</li>
+            <li>Accessibility improvements, including ARIA roles and high-contrast design.</li>
+          </ul>
+        </section>
+
+        <!-- Outcome Section -->
+        <section class="mb-5">
+          <h2 class="h4 text-uppercase mb-3">Outcome</h2>
+          <p>
+            The site successfully achieved its goals, providing an elegant showcase of projects while ensuring optimal
+            performance on all devices.
+          </p>
+          <img src="path-to-project-screenshot.jpg" class="img-fluid rounded shadow" alt="Project Screenshot" />
+        </section>
+
+        <!-- Reflection -->
+        <section class="mb-5">
+          <h2 class="h4 text-uppercase mb-3">Reflection</h2>
+          <p>
+            One of the main challenges was ensuring the site’s performance with a large number of high-quality images.
+            By optimizing assets and using lazy loading techniques, I achieved fast load times across all devices.
+          </p>
+        </section>
+
+        <!-- Call-to-Action -->
+        <div class="text-center mt-5">
+          <a href="live-demo-link" class="btn btn-primary btn-lg me-3">View Live Demo</a>
+          <a href="github-repo-link" class="btn btn-secondary btn-lg">View GitHub Repo</a>
+        </div>
+      </main>
+
+      <!-- Footer injected in javascript main.js  -->
+      <div id="footer"></div>
+    </div>
+
+    <script type="module" src="./javascripts/main.js"></script>
+  </body>
+</html>

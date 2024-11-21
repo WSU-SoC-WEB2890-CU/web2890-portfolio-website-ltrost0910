@@ -140,15 +140,15 @@
 /* For large screens (992 is large) */
 @media (min-width: 992px) {
   .carousel-text-col h2 {
-    font-size: 1.5rem;
-    margin-bottom: 0.75rem;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
   }
   .carousel-text-col h5 {
-    font-size: 0.8rem;
+    font-size: 0.75rem;
   }
   #slider {
-    padding: 50px 100px !important;
-    margin: 50px 100px !important;
+    padding: 50px 80px !important;
+    margin: 50px 80px !important;
   }
 }
 /* For xxl-large screens (1400 is xxl) */
@@ -161,7 +161,7 @@
     font-size: 0.9rem;
   }
   #slider {
-    padding: 75px 150px !important;
-    margin: 75px 150px !important;
+    padding: 75px 100px !important;
+    margin: 75px 100px !important;
   }
 }
