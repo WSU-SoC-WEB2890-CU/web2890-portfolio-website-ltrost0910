@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Trost Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="index,follow" />
+    <meta name="description" content="A portfolio of work by Linda Trost" />
+    <title>Linda Trost Portfolio</title>
+    <link rel="preload" href="/intro-section-hands-typing-unsplash-resized.webp" as="image" />
+    <link rel="preload" href="/LT_Logo.png" as="image" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./stylesheets/main.scss" />
+  </head>
+
+  <body class="loading">
+    <div id="body-content" page-name="about">
+      <header>
+        <!-- Nav Menu and Hero injected in javascript main.js  -->
+        <div id="navmenu"></div>
+        <div id="hero"></div>
+      </header>
+
+      <section id="aboutSection">
+        <div class="container pt-2">
+          <div class="row mt-2 text-center">
+            <h1>About Me</h1>
+            <!-- <p>Take a look at some my projects and live production sites</p> -->
+            <div class="divider div-transparent div-dot mt-2 mb-2 mb-md-3"></div>
+          </div>
+
+          <!-- Content Row: Text and Image in 2 Columns, Centered -->
+          <div class="row m-2 mt-5 justify-content-center align-items-center">
+            <!-- Text Column -->
+            <div class="col-md-7 text-left">
+              <p>
+                After a 35+ year career as a developer and manager specializing in enterprise systems, backend
+                processing, and core business applications, I decided to return to Weber State to further explore web
+                design and development. Building on my WSU Information Technology bachelor's degree, I have now earned a
+                Web Essentials Certificate and am nearing the completion of an AAS in Web and User Experience.
+              </p>
+              <p>
+                Now, I enjoy taking one class per semester as a retirement hobby, and applying my new web skills to
+                design, develop and maintain websites for local groups and small businesses. Check out samples of my
+                work by viewing my <a href="portfolio.html">Portfolio</a> page!
+              </p>
+            </div>
+
+            <!-- Image Column: Centered with Title Below -->
+            <div class="col-md-5">
+              <div class="d-flex flex-column align-items-center">
+                <div class="lt-circle-container mt-sm-3">
+                  <img src="/lindat.jpg" class="img-fluid rounded-circle" alt="Linda Trost" loading="lazy" />
+                </div>
+                <h4 class="cinzel fw-bold mt-4">Linda Trost</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer injected in javascript main.js  -->
+      <div id="footer"></div>
+    </div>
+
+    <script type="module" src="./javascripts/main.js"></script>
+  </body>
+</html>

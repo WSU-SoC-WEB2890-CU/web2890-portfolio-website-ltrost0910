@@ -1,3 +1,152 @@
-/* Your styles go here */
-@import "bootstrap/scss/bootstrap.scss";
-@import "bootstrap-icons/font/bootstrap-icons.css";
+@import "custom";
+@import "typography";
+@import "hero";
+@import "card";
+@import "carousel";
+@import "footer";
+@import "loading-screen";
+
+// header navmenu company title -- only show on very small screens
+.responsive-short {
+  display: none;
+}
+.btn-border-none {
+  border: none;
+}
+
+@media (max-width: 576px) {
+  .responsive-header {
+    font-size: 4vw;
+  }
+}
+@media (max-width: 320px) {
+  .responsive-header {
+    display: none; /* Hide original text */
+  }
+  .responsive-short {
+    display: block;
+  }
+}
+
+.img-gradient {
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), var(--image-url);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  aspect-ratio: 3 / 2;
+  position: relative;
+}
+.force-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.lt-gray {
+  background-color: #f0f0f0;
+}
+
+.bg-blur {
+  backdrop-filter: blur(4px) saturate(80%);
+}
+
+.lt-circle-container {
+  border: 5px solid $secondary; /* border around circle */
+  outline: 10px solid $primary;
+  outline-offset: 1px;
+  width: 100%;
+  max-width: 250px; /* Ensures the circle-container does not exceed 250px */
+  height: auto; /* Set height to auto for responsive scaling */
+  aspect-ratio: 1/1; /* Maintains square aspect ratio */
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
+  display: flex; /* Centering the image */
+  align-items: center;
+  justify-content: center;
+}
+
+.lt-circle-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.divider {
+  position: relative;
+  height: 1px;
+}
+
+.div-transparent:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 20%; /* Reduce width by increasing left/right */
+  right: 20%;
+  width: 60%; /* Explicit width for clarity */
+  height: 1px;
+  background-image: linear-gradient(to right, transparent, rgb(48, 49, 51), transparent);
+}
+
+.div-dot:after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: -5px; /* Adjust position for a smaller dot */
+  left: calc(50% - 6px); /* Align smaller dot */
+  width: 12px; /* Reduce size of the dot was 18px */
+  height: 12px;
+  background-color: goldenrod;
+  border: 1px solid rgb(48, 49, 51);
+  border-radius: 50%;
+  box-shadow: inset 0 0 0 1px white, 0 0 0 2px white;
+}
+
+/* Styles for smaller screens */
+@media (max-width: 767px) {
+  placeholder {
+    font-size: 10px;
+  }
+}
+
+/* Styles for medium and larger screens */
+@media (min-width: 768px) {
+  placeholder {
+    font-size: 10px;
+  }
+}
+
+/* For screens smaller than large (992 is large) */
+@media (max-width: 991px) {
+  footer img {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+/* Styles for smaller screens */
+@media (max-width: 767px) {
+  .float-figure {
+    width: 100%;
+    margin-right: initial;
+  }
+}
+
+/* Styles for medium and larger screens */
+@media (min-width: 768px) {
+  .float-figure {
+    width: 40%;
+    margin-right: 2rem;
+  }
+}
+
+#messageNotice {
+  display: none;
+  font-size: 1rem;
+  font-weight: bold;
+  color: green;
+  margin-top: 10px;
+}

@@ -1,0 +1,62 @@
+/* Card container styling */
+
+/* Card styling */
+.card {
+  border: 0.5px solid #d3d3d3; /* Thin border around card */
+  // border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  height: 100%;
+}
+
+.card:hover {
+  transform: translateY(-5px); /* Slight lift effect on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* Stronger shadow on hover */
+}
+
+/* Card image styling */
+.card img {
+  width: 100%;
+  height: 300px; /* Fixed height for consistent card size */
+  object-fit: cover;
+  object-position: center top;
+  border: 1px solid $primary; /* #d3d3d3 Add border around the image */
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  Soft shadow */
+  /*border-radius: 8px;  Optional: add rounded corners */
+  padding: 1px; /* Optional: space between the image and border */
+  box-sizing: border-box; /* Ensure padding and border are included in the element's dimensions */
+}
+
+/* Card title styling */
+.card-title {
+  font-family: "Poppins";
+  font-weight: 400; /* normal */
+  /* color: #333333; Darker color for contrast */
+  font-size: 1.5rem;
+}
+
+.card-body-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center content vertically */
+  align-items: center; /* Optional: Align children horizontally in the center */
+}
+
+/* Card body content */
+.card-body {
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.card-text {
+  // color: #666666;
+  font-size: 0.9rem;
+}
+
+.card-footer {
+  background-color: inherit;
+  border: none;
+  margin-top: auto; /* Push to the bottom in a flex parent */
+  margin-bottom: 0.5rem;
+}

@@ -1,0 +1,139 @@
+// Import your font variables
+$hero-name-h1-size: 60px;
+$h1-size: 48px;
+$h2-size: 36px;
+$h3-size: 30px;
+$h4-size: 24px;
+$p-size: 16px;
+
+// Smaller font sizes for mobile screens
+$hero-name-h1-size-sm: 42px;
+$h1-size-sm: 36px;
+$h2-size-sm: 28px;
+$h3-size-sm: 24px;
+$h4-size-sm: 20px;
+$p-size-sm: 14px;
+
+// Medium font sizes for tablets
+$hero-name-h1-size-md: 50px;
+$h1-size-md: 42px;
+$h2-size-md: 32px;
+$h3-size-md: 26px;
+$h4-size-md: 22px;
+$p-size-md: 15px;
+
+// Hero Headings
+h1.hero-name {
+  font-family: $cinzel;
+  font-size: $hero-name-h1-size;
+  font-weight: 400;
+
+  // Responsive adjustments
+  @media (max-width: 992px) {
+    // Large tablets & desktops
+    font-size: $hero-name-h1-size-md;
+  }
+
+  @media (max-width: 768px) {
+    // Tablets
+    font-size: $h1-size-sm;
+  }
+
+  @media (max-width: 576px) {
+    // Mobile devices
+    font-size: $hero-name-h1-size-sm;
+  }
+}
+
+// General Headings
+h1 {
+  font-family: $cinzel;
+  font-size: $h1-size;
+  font-weight: 700;
+
+  @media (max-width: 992px) {
+    font-size: $h1-size-md;
+  }
+
+  @media (max-width: 768px) {
+    font-size: $h1-size-sm;
+  }
+
+  @media (max-width: 576px) {
+    font-size: 32px; // Smaller size for mobile if needed
+  }
+}
+
+h2 {
+  font-family: $poppins;
+  font-size: $h2-size;
+  font-weight: 700;
+
+  @media (max-width: 992px) {
+    font-size: $h2-size-md;
+  }
+
+  @media (max-width: 768px) {
+    font-size: $h2-size-sm;
+  }
+}
+
+h3 {
+  font-family: $poppins;
+  font-size: $h3-size;
+  font-weight: 500;
+
+  @media (max-width: 992px) {
+    font-size: $h3-size-md;
+  }
+
+  @media (max-width: 768px) {
+    font-size: $h3-size-sm;
+  }
+}
+
+h4 {
+  font-family: $poppins;
+  font-size: $h4-size;
+  font-weight: 500;
+
+  @media (max-width: 992px) {
+    font-size: $h4-size-md;
+  }
+
+  @media (max-width: 768px) {
+    font-size: $h4-size-sm;
+  }
+}
+
+// Paragraphs
+p {
+  font-family: $montserrat;
+  font-size: $p-size;
+  font-weight: 400;
+
+  @media (max-width: 992px) {
+    font-size: $p-size-md;
+  }
+
+  @media (max-width: 768px) {
+    font-size: $p-size-sm;
+  }
+}
+
+// Utility font classes
+.cinzeldecor {
+  font-family: $cinzel-decor;
+}
+
+.cinzel {
+  font-family: $cinzel;
+}
+
+.poppins {
+  font-family: $poppins;
+}
+
+.montserrat {
+  font-family: $montserrat;
+}

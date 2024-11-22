@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Trost Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="index,follow" />
+    <meta name="description" content="A portfolio of work by Linda Trost" />
+    <title>Linda Trost Portfolio</title>
+    <link rel="preload" href="/intro-section-hands-typing-unsplash-resized.webp" as="image" />
+    <link rel="preload" href="/LT_Logo.png" as="image" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./stylesheets/main.scss" />
+  </head>
+
+  <body class="loading">
+    <div id="body-content" page-name="contact">
+      <header>
+        <!-- Nav Menu and Hero injected in javascript main.js  -->
+        <div id="navmenu"></div>
+        <div id="hero"></div>
+      </header>
+
+      <!-- THE CONTACT SECTION -->
+      <section id="contactSection">
+        <div class="container pt-2">
+          <div class="row mt-2 text-center">
+            <h1>Contact</h1>
+            <p>Send me a message using the form below!</p>
+            <div class="divider div-transparent div-dot mt-2 mb-2 mb-md-3"></div>
+          </div>
+          <div class="container-fluid mt-5 p-5 bg-secondary">
+            <div class="row justify-content-center align-items-center">
+              <div class="col-lg-6">
+                <form id="contactForm">
+                  <div class="mt-0 mb-3">
+                    <label for="name" class="form-label">Name</label>
+                    <input type="text" class="form-control" id="name" required />
+                    <div class="contact-form-feedback" id="nameFeedback"></div>
+                  </div>
+                  <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email" required />
+                    <div class="contact-form-feedback" id="emailFeedback"></div>
+                  </div>
+                  <div class="mb-3">
+                    <label for="message" class="form-label">Message</label>
+                    <textarea class="form-control" id="message" rows="4" required></textarea>
+                    <div class="contact-form-feedback" id="messageFeedback"></div>
+                  </div>
+                  <div class="text-center">
+                    <button
+                      type="submit"
+                      class="btn btn-primary mt-4 py-2 px-3 px-md-5 mb-5 mb-lg-0 text-white fw-bold border border-dark"
+                    >
+                      Send
+                    </button>
+                  </div>
+                  <p class="text-center" id="messageNotice">Message sent successfully!</p>
+                </form>
+              </div>
+
+              <!-- Image Column: Centered with Title Below -->
+              <div class="col-md-6">
+                <div class="d-flex flex-column align-items-center">
+                  <div class="lt-circle-container">
+                    <img src="/lindat.jpg" class="img-fluid rounded-circle" alt="Linda Trost" loading="lazy" />
+                  </div>
+                  <h4 class="cinzel fw-bold mt-4">Linda Trost</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer injected in javascript main.js  -->
+      <div id="footer"></div>
+    </div>
+
+    <script>
+      //contact form message trap
+      document.getElementById("contactForm").addEventListener("submit", function (event) {
+        event.preventDefault() // Prevent the default form submission behavior
+
+        // Show the message notice
+        const messageNotice = document.getElementById("messageNotice")
+        messageNotice.style.display = "block"
+
+        // Optional: Clear the form fields
+        this.reset()
+
+        // Optional: Hide the notice after a few seconds
+        setTimeout(() => {
+          messageNotice.style.display = "none"
+        }, 3000) // 3 seconds
+      })
+    </script>
+
+    <script type="module" src="./javascripts/main.js"></script>
+  </body>
+</html>
